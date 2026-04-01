@@ -1,25 +1,28 @@
-<<<<<<< HEAD
 import java.util.Scanner;
 
-=======
->>>>>>> bf2163b93da4673a769715103778aaf9073a7bac
 public class PalindromeCheckerApp {
 
-    public static void main(String[] args) {
-
-<<<<<<< HEAD
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Enter a word:");
-        String input = sc.nextLine();
-
+    public static boolean isPalindrome(String input) {
         String reversed = "";
 
         for(int i = input.length() - 1; i >= 0; i--) {
-            reversed = reversed + input.charAt(i);
+            reversed += input.charAt(i);
         }
 
-        if(input.equalsIgnoreCase(reversed)) {
+        return input.equalsIgnoreCase(reversed);
+    }
+
+    public static void main(String[] args) {
+
+        System.out.println("Welcome to Palindrome Checker App");
+        System.out.println("This program checks whether a word is palindrome or not");
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a word: ");
+        String word = sc.nextLine();
+
+        if(isPalindrome(word)) {
             System.out.println("It is a Palindrome");
         } else {
             System.out.println("Not a Palindrome");
@@ -27,11 +30,4 @@ public class PalindromeCheckerApp {
 
         sc.close();
     }
-=======
-        System.out.println("Welcome to Palindrome Checker App");
-        System.out.println("This program checks whether a word is palindrome or not");
-
-    }
-
->>>>>>> bf2163b93da4673a769715103778aaf9073a7bac
 }
